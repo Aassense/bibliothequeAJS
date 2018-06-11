@@ -14,6 +14,7 @@ public class Transfert {
 	private final static String password = "";
 
 	private final static String GetLivresRequest = "SELECT * " + "FROM livre";
+	private final static String DeleteLivreRequest = "DELETE FROM livre WHERE ";
 
 	public ArrayList<Livre> getLivres() {
 		ArrayList<Livre> list = new ArrayList<>();
