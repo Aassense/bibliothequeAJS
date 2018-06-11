@@ -10,7 +10,7 @@ import java.util.ArrayList;
 
 public class Transfert {
 	private Connection connection = null;
-	private final static String URL = "jdbc:mysql://localhost/bibliothequeAJS";
+	private final static String URL = "jdbc:mysql://192.168.1.28/bibliothequeAJS";
 	private final static String login = "root";
 	private final static String password = "";
 
@@ -22,7 +22,7 @@ public class Transfert {
 			Class.forName("com.mysql.jdbc.Driver");
 			// La connexion
 			connection = DriverManager.getConnection(URL, login, password);
-			System.out.println("connection à la base réussie");
+			System.out.println("connexion à la base réussie");
 			PreparedStatement stmtDelete = connection.prepareStatement(DeleteLivreRequest);
 			stmtDelete.setInt(1, id);
 
@@ -52,7 +52,7 @@ public class Transfert {
 			Class.forName("com.mysql.jdbc.Driver");
 			// La connexion
 			connection = DriverManager.getConnection(URL, login, password);
-			System.out.println("connection à la base réussie");
+			System.out.println("connexion à la base réussie");
 			Statement stmtEmprunts = connection.createStatement();
 			// Remplir la requête
 			ResultSet rs = stmtEmprunts.executeQuery(GetLivresRequest);
