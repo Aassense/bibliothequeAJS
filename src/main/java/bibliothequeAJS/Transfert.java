@@ -2,6 +2,7 @@ package bibliothequeAJS;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -14,7 +15,36 @@ public class Transfert {
 	private final static String password = "";
 
 	private final static String GetLivresRequest = "SELECT * " + "FROM livre";
-	private final static String DeleteLivreRequest = "DELETE FROM livre WHERE ";
+	private final static String DeleteLivreRequest = "DELETE FROM livre WHERE id =? ";
+
+	public void deleteLivre(int id) {
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+			// La connexion
+			connection = DriverManager.getConnection(URL, login, password);
+			System.out.println("connection à la base réussie");
+			PreparedStatement stmtDelete = connection.prepareStatement(DeleteLivreRequest);
+			stmtDelete.setInt(1, id);
+
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		} finally {
+			// On ferme la connexion
+			if (connection != null) {
+				try {
+					connection.close();
+				} catch (final SQLException e) {
+					e.printStackTrace();
+				}
+			}
+
+		}
+
+	}
 
 	public ArrayList<Livre> getLivres() {
 		ArrayList<Livre> list = new ArrayList<>();
