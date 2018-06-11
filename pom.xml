@@ -12,12 +12,18 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ajs.enterprise</groupId>
-	<artifactId>bibliotheque-AJS</artifactId>
+	<artifactId>bibliothequeAJS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 
 	<dependencies>
+
+		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+
+		</dependency>
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -44,7 +50,7 @@
         <configuration>
           <archive>
             <manifest>
-              <mainClass>Application</mainClass>
+              <mainClass>bibliothequeAJS.Application</mainClass>
             </manifest>
           </archive>
         </configuration>
