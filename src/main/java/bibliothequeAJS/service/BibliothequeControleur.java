@@ -42,7 +42,7 @@ public class BibliothequeControleur {
     livres = transfert.getLivres();
 
   }
-
+  @CrossOrigin("*")
   @PostMapping(path = "/transfert/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   private String deleteLivre(@PathVariable("index") int index) {
     switch (transfert.deleteLivre(index)) {
