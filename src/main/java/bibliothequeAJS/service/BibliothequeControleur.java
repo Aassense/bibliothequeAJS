@@ -1,4 +1,4 @@
-package bibliothequeAJS;
+package bibliothequeAJS.service;
 
 import java.util.List;
 

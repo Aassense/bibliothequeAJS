@@ -1,4 +1,4 @@
-package bibliothequeAJS;
+package bibliothequeAJS.service;
 
 public class Livre {
 	private int id;
