@@ -26,16 +26,19 @@ public class LivreControleur extends HttpServlet {
   }
 
   @RequestMapping({ "/retrait/{index}" })
-  public String retrait(@PathVariable("index") int index) {
+  public String retrait(@PathVariable("index") int index,
+      HttpServletRequest request) {
     try {
       Transfert transfert = new Transfert();
       transfert.addLivre(livre);
       Requetes requetes = new Requetes();
       requetes.delete(index);
+      request.setAttribute("message", "Retrait effectué");
+
     } catch (Exception e) {
       e.printStackTrace();
     }
-    return "redirect:/index";
+    return "forward:/message";
   }
 
 }

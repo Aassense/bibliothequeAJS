@@ -24,7 +24,6 @@ tr:nth-child(even){background-color: #f2f2f2}
 <title>Retrait du livre</title>
 </head>
 <body>
-<% %>
 <h1>Retrait du livre.</h1>
 <h2>Cliquer sur Retrait pour transférer le livre.</h2>
 <table>
@@ -41,7 +40,7 @@ tr:nth-child(even){background-color: #f2f2f2}
       <th>${livre.editeur}</th>
     <tr>
 </table>
-<input type="submit" ><a href="/bibliothequeIAA/retrait/${livre.id}">Retrait</a></input>
+<a href="/bibliothequeIAA/retrait/${livre.id}">Retrait</a>
 
 
 
