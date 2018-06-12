@@ -12,8 +12,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import bibliothequeAJS.service.Livre;
 import bibliothequeAJS.service.Transfert;
 
+/**
+ *
+ * Gestion des routes depuis l'affichage d'un livre
+ *
+ */
 @Controller
-
 @RequestMapping("bibliothequeIAA")
 public class LivreControleur extends HttpServlet {
 

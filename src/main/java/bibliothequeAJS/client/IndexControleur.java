@@ -10,6 +10,12 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+/**
+ *
+ * Gestion des routes depuis vers l'index.jsp, affichage de la bibliothèque
+ * cible
+ *
+ */
 @Controller
 @RequestMapping("/")
 public class IndexControleur {
