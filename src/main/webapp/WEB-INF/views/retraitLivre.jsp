@@ -66,7 +66,10 @@
 					</table>
 				</div>
 				<div>
-					 <button type="button" href="/bibliothequeIAA/retrait/${livre.id}">Retrait</button>
+					<form>
+						<input class="RetraitButton" type="button" value="Retirer le livre"
+							onclick="window.location.href='/bibliothequeIAA/retrait/${livre.id}'" />
+					</form>
 				</div>
 			</div>
 		</div>

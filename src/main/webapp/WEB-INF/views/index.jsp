@@ -33,8 +33,8 @@
 
 <body>
 	<c:if test="${ !message.isEmpty() }">
-		<div class="container">
-			<p>${message }</p>
+		<div class="limiter">
+			<h1>${message }</h1>
 		</div>
 	</c:if>
 
