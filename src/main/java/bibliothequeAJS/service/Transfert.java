@@ -17,6 +17,8 @@ public class Transfert {
 	private final static String GetLivresRequest = "SELECT * " + "FROM livre";
 	private final static String DeleteLivreRequest = "DELETE FROM livre WHERE id =? ";
 	private final static String ExisteLivreRequest = "SELECT COUNT(id) FROM livre WHERE id=?";
+	private final static String AddLivreRequest = "INSERT INTO livre (titre, annee, auteur, editeur)"
+			+ "VALUES (?,?,?,?)";
 	public final static int LIVRE_ABSENT = 1;
 	public final static int LIVRE_EFFACE = 2;
 	public final static int ERREUR_SQL = 3;
@@ -88,5 +90,40 @@ public class Transfert {
 		}
 		return list;
 
+	}
+
+	public void addLivre(Livre livre) {
+
+		try {
+			Class.forName("com.mysql.jdbc.Driver");
+
+			connection = DriverManager.getConnection(URL, login, password);
+			System.out.println("connection à la base réussie");
+
+			PreparedStatement stmtLivre = connection.prepareStatement(AddLivreRequest);
+
+			stmtLivre.setString(1, livre.getTitre());
+			stmtLivre.setInt(2, livre.getAnnee());
+			stmtLivre.setString(3, livre.getAuteur());
+			stmtLivre.setString(4, livre.getEditeur());
+			stmtLivre.executeUpdate();
+			stmtLivre.close();
+
+		} catch (SQLException e) {
+
+			e.printStackTrace();
+		} catch (ClassNotFoundException e) {
+
+			e.printStackTrace();
+		} finally {
+
+			if (connection != null) {
+				try {
+					connection.close();
+				} catch (final SQLException e) {
+					e.printStackTrace();
+				}
+			}
+		}
 	}
 }
