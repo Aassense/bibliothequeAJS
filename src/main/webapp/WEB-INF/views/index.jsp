@@ -6,6 +6,7 @@
 
 <head>
 <title>Bibliothèque AJS</title>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -31,14 +32,14 @@
 </head>
 
 <body>
-<c:if test="${ !message.isEmpty() }">
-<div class="container">
-  <p>${message }</p>
-</div>
-</c:if>
+	<c:if test="${ !message.isEmpty() }">
+		<div class="container">
+			<p>${message }</p>
+		</div>
+	</c:if>
 
 	<div class="limiter">
-	
+
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100 ver5 m-b-110">
@@ -55,16 +56,20 @@
 						<tbody>
 
 							<c:forEach items="${livres}" var="livre" varStatus="indexListe">
-								<tr class="row100" >
-									<td class="column100 column1" data-column="column1"><a href="/getLivre/${indexListe.count}"><c:out
-											value="${livre.titre}" /></a></td>
-									<td class="column100 column2" data-column="column2"><a href="/getLivre/${indexListe.count}"><c:out
-											value="${livre.annee}" /></a></td>
-									<td class="column100 column3" data-column="column3"><a href="/getLivre/${indexListe.count}"><c:out
-											value="${livre.auteur}" /></a></td>
-									<td class="column100 column4" data-column="column4"><a href="/getLivre/${indexListe.count}"><c:out
-											value="${livre.editeur}" /></a></td>
-											
+								<tr class="row100">
+									<td class="column100 column1" data-column="column1"><a
+										href="/getLivre/${indexListe.count}"><c:out
+												value="${livre.titre}" /></a></td>
+									<td class="column100 column2" data-column="column2"><a
+										href="/getLivre/${indexListe.count}"><c:out
+												value="${livre.annee}" /></a></td>
+									<td class="column100 column3" data-column="column3"><a
+										href="/getLivre/${indexListe.count}"><c:out
+												value="${livre.auteur}" /></a></td>
+									<td class="column100 column4" data-column="column4"><a
+										href="/getLivre/${indexListe.count}"><c:out
+												value="${livre.editeur}" /></a></td>
+
 								</tr>
 							</c:forEach>
 						</tbody>
