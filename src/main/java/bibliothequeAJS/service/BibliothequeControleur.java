@@ -2,6 +2,7 @@ package bibliothequeAJS.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -16,7 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 public class BibliothequeControleur {
 
   private List<Livre> livres;
-  private Transfert transfert = new Transfert();
+  @Autowired
+  private Transfert transfert;
 
   @CrossOrigin("*")
   @GetMapping(path = "/livres", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
