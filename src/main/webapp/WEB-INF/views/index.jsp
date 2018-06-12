@@ -32,14 +32,11 @@
           <table data-vertable="ver5">
             <thead>
               <tr class="row100 head">
-                <th class="column100 column1" data-column="column1"></th>
-                <th class="column100 column2" data-column="column2">Sunday</th>
-                <th class="column100 column3" data-column="column3">Monday</th>
-                <th class="column100 column4" data-column="column4">Tuesday</th>
-                <th class="column100 column5" data-column="column5">Wednesday</th>
-                <th class="column100 column6" data-column="column6">Thursday</th>
-                <th class="column100 column7" data-column="column7">Friday</th>
-                <th class="column100 column8" data-column="column8">Saturday</th>
+                <th class="column100 column1" data-column="column1">ID</th>
+                <th class="column100 column2" data-column="column2">Titre</th>
+                <th class="column100 column3" data-column="column3">Date</th>
+                <th class="column100 column4" data-column="column4">Auteur</th>
+                <th class="column100 column5" data-column="column5">Editeur</th>
               </tr>
             </thead>
             <tbody>
@@ -49,9 +46,7 @@
                 <td class="column100 column3" data-column="column3">--</td>
                 <td class="column100 column4" data-column="column4">--</td>
                 <td class="column100 column5" data-column="column5">8:00 AM</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">5:00 PM</td>
-                <td class="column100 column8" data-column="column8">8:00 AM</td>
+
               </tr>
 
               <tr class="row100">
@@ -60,9 +55,7 @@
                 <td class="column100 column3" data-column="column3">5:00 PM</td>
                 <td class="column100 column4" data-column="column4">5:00 PM</td>
                 <td class="column100 column5" data-column="column5">--</td>
-                <td class="column100 column6" data-column="column6">9:00 AM</td>
-                <td class="column100 column7" data-column="column7">--</td>
-                <td class="column100 column8" data-column="column8">--</td>
+
               </tr>
 
               <tr class="row100">
@@ -71,9 +64,7 @@
                 <td class="column100 column3" data-column="column3">--</td>
                 <td class="column100 column4" data-column="column4">--</td>
                 <td class="column100 column5" data-column="column5">--</td>
-                <td class="column100 column6" data-column="column6">--</td>
-                <td class="column100 column7" data-column="column7">2:00 PM</td>
-                <td class="column100 column8" data-column="column8">8:00 AM</td>
+
               </tr>
 
               <tr class="row100">
@@ -82,9 +73,7 @@
                 <td class="column100 column3" data-column="column3">5:00 PM</td>
                 <td class="column100 column4" data-column="column4">5:00 PM</td>
                 <td class="column100 column5" data-column="column5">--</td>
-                <td class="column100 column6" data-column="column6">9:00 AM</td>
-                <td class="column100 column7" data-column="column7">--</td>
-                <td class="column100 column8" data-column="column8">--</td>
+
               </tr>
 
               <tr class="row100">
