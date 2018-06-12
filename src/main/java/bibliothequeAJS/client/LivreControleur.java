@@ -1,30 +1,29 @@
 package bibliothequeAJS.client;
 
 import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
-
-import bibliothequeAJS.service.Livre;
 
 @Controller
 
 @RequestMapping("bibliothequeIAA")
 public class LivreControleur extends HttpServlet {
 
-	private static final long serialVersionUID = 1L;
+  private static final long serialVersionUID = 1L;
 
-	@RequestMapping({ "/detail" })
-	public String index(Model model) {
+  @RequestMapping({ "/detail" })
+  public String index(Model model, HttpServletRequest request) {
+    // System.out.println(request.getAttribute("livre"));
+    // model.addAttribute("livre", );
+    return "retraitLivre";
+  }
 
-		model.addAttribute("livre", new Livre(1, "Titre", 1990, "auteur", "editeur"));
-		return "retraitLivre";
-	}
-
-	@RequestMapping({ "/retrait" })
-	public String retrait() {
-		return "redirect:/index";
-	}
+  @RequestMapping({ "/retrait" })
+  public String retrait() {
+    return "redirect:/index";
+  }
 
 }

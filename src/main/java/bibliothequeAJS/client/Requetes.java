@@ -28,7 +28,7 @@ public class Requetes {
     return "code retour";
   }
 
-  public List<Livre> get() throws IOException {
+  public List<Livre> getLivres() throws IOException {
     List<Livre> livres = new ArrayList<>();
 
     url = new URL("http://192.168.1.19:8080/iaa-bibli/api/liste");
