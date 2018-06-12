@@ -8,6 +8,9 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 
+import bibliothequeAJS.client.Requetes;
+import bibliothequeAJS.service.Transfert;
+
 @SpringBootApplication
 public class Application {
 
@@ -25,5 +28,15 @@ public class Application {
     vr.setSuffix(".jsp");
     vr.setViewClass(JstlView.class);
     return vr;
+  }
+
+  @Bean
+  public Transfert getTransfert() {
+    return new Transfert();
+  }
+
+  @Bean
+  public Requetes getRequetes() {
+    return new Requetes();
   }
 }
