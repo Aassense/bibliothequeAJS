@@ -13,46 +13,46 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/bibliothequeAJS")
 public class BibliothequeControleur {
 
-	private List<Livre> livres;
-	private Transfert transfert = new Transfert();
+  private List<Livre> livres;
+  private Transfert transfert = new Transfert();
 
-	@GetMapping(path = "/livres", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public List<Livre> getLivres() {
-		updateLivres();
-		return livres;
-	}
+  @GetMapping(path = "/livres", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+  public List<Livre> getLivres() {
+    updateLivres();
+    return livres;
+  }
 
-	@GetMapping(path = "/livres/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+  @GetMapping(path = "/livres/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 
-	public Livre getOccupation(@PathVariable("index") int index) {
+  public Livre getOccupation(@PathVariable("index") int index) {
 
-		updateLivres();
-		for (Livre livre : livres) {
-			if (livre.getId() == index) {
-				return livre;
-			}
-		}
-		return null;
-	}
+    updateLivres();
+    for (Livre livre : livres) {
+      if (livre.getId() == index) {
+        return livre;
+      }
+    }
+    return null;
+  }
 
-	private void updateLivres() {
-		livres = transfert.getLivres();
+  private void updateLivres() {
+    livres = transfert.getLivres();
 
-	}
+  }
 
-	@PostMapping(path = "/transfert/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	private String deleteLivre(@PathVariable("index") int index) {
-		switch (transfert.deleteLivre(index)) {
-		case Transfert.ERREUR_SQL:
-			return "Probleme de base de donnee";
+  @PostMapping(path = "/transfert/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+  private String deleteLivre(@PathVariable("index") int index) {
+    switch (transfert.deleteLivre(index)) {
+    case Transfert.ERREUR_SQL:
+      return "Probleme de base de donnee";
 
-		case Transfert.LIVRE_ABSENT:
-			return "Le livre n'existe pas";
+    case Transfert.LIVRE_ABSENT:
+      return "Le livre n'existe pas";
 
-		default:
-			return "Retrait reussi";
-		}
+    default:
+      return "Retrait reussi";
+    }
 
-	}
+  }
 
 }
