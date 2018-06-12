@@ -15,6 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class BibliothequeControleur {
 
+<<<<<<< HEAD
+  private List<Livre> livres;
+  private Transfert transfert = new Transfert();
+
+  @GetMapping(path = "/livres", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+  public List<Livre> getLivres() {
+    updateLivres();
+    return livres;
+  }
+
+  @GetMapping(path = "/livres/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+=======
 	private List<Livre> livres;
 	private Transfert transfert = new Transfert();
 	
@@ -26,36 +38,37 @@ public class BibliothequeControleur {
 	}
 	@CrossOrigin(origins = "*")
 	@GetMapping(path = "/livres/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+>>>>>>> 6428559c0ae365a66ac148b74e55925a694e493d
 
-	public Livre getOccupation(@PathVariable("index") int index) {
+  public Livre getOccupation(@PathVariable("index") int index) {
 
-		updateLivres();
-		for (Livre livre : livres) {
-			if (livre.getId() == index) {
-				return livre;
-			}
-		}
-		return null;
-	}
+    updateLivres();
+    for (Livre livre : livres) {
+      if (livre.getId() == index) {
+        return livre;
+      }
+    }
+    return null;
+  }
 
-	private void updateLivres() {
-		livres = transfert.getLivres();
+  private void updateLivres() {
+    livres = transfert.getLivres();
 
-	}
+  }
 
-	@PostMapping(path = "/transfert/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	private String deleteLivre(@PathVariable("index") int index) {
-		switch (transfert.deleteLivre(index)) {
-		case Transfert.ERREUR_SQL:
-			return "Probleme de base de donnee";
+  @PostMapping(path = "/transfert/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
+  private String deleteLivre(@PathVariable("index") int index) {
+    switch (transfert.deleteLivre(index)) {
+    case Transfert.ERREUR_SQL:
+      return "Probleme de base de donnee";
 
-		case Transfert.LIVRE_ABSENT:
-			return "Le livre n'existe pas";
+    case Transfert.LIVRE_ABSENT:
+      return "Le livre n'existe pas";
 
-		default:
-			return "Retrait reussi";
-		}
+    default:
+      return "Retrait reussi";
+    }
 
-	}
+  }
 
 }
