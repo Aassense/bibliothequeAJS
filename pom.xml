@@ -12,9 +12,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>ajs.enterprise</groupId>
-	<artifactId>bibliotheque-AJS</artifactId>
+	<artifactId>bibliothequeAJS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 
 
 	<dependencies>
