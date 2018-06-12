@@ -41,7 +41,7 @@ tr:nth-child(even){background-color: #f2f2f2}
       <th>${livre.editeur}</th>
     <tr>
 </table>
-<input type="submit" value="Envoyer" >
+<input type="submit" ><a href="/bibliothequeIAA/retrait/${livre.id}">Retrait</a></input>
 
 
 

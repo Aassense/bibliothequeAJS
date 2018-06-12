@@ -24,12 +24,12 @@ public class IndexControleur {
     return "index";
   }
 
-  @RequestMapping("getLivre/{index}")
-  public String getdetail(@PathVariable("index") int index,
+  @RequestMapping("getLivre/{indexListe}")
+  public String getdetail(@PathVariable("indexListe") int indexListe,
       HttpServletRequest request) {
     try {
-      System.out.println(requetes.getLivres().get(index));
-      request.setAttribute("livre", requetes.getLivres().get(index));
+      System.out.println(requetes.getLivres().get(indexListe));
+      request.setAttribute("livre", requetes.getLivres().get(indexListe));
     } catch (IOException e) {
       e.printStackTrace();
     }
