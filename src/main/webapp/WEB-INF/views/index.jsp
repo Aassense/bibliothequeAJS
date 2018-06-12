@@ -3,57 +3,152 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<style>
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    width: 100%;
-    border: 1px solid #ddd;
-}
-
-th, td {
-    text-align: left;
-    padding: 8px;
-}
-
-tr:nth-child(even){background-color: #f2f2f2}
-</style>
+  <title>Bibliothèque AJS</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->  
+  <link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
+<!--===============================================================================================-->
+  <link rel="stylesheet" type="text/css" href="css/util.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
 </head>
 <body>
+  
+  <div class="limiter">
+    <div class="container-table100">
+      <div class="wrap-table100">
+        <div class="table100 ver5 m-b-110">
+          <table data-vertable="ver5">
+            <thead>
+              <tr class="row100 head">
+                <th class="column100 column1" data-column="column1"></th>
+                <th class="column100 column2" data-column="column2">Sunday</th>
+                <th class="column100 column3" data-column="column3">Monday</th>
+                <th class="column100 column4" data-column="column4">Tuesday</th>
+                <th class="column100 column5" data-column="column5">Wednesday</th>
+                <th class="column100 column6" data-column="column6">Thursday</th>
+                <th class="column100 column7" data-column="column7">Friday</th>
+                <th class="column100 column8" data-column="column8">Saturday</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row100">
+                <td class="column100 column1" data-column="column1">Lawrence Scott</td>
+                <td class="column100 column2" data-column="column2">8:00 AM</td>
+                <td class="column100 column3" data-column="column3">--</td>
+                <td class="column100 column4" data-column="column4">--</td>
+                <td class="column100 column5" data-column="column5">8:00 AM</td>
+                <td class="column100 column6" data-column="column6">--</td>
+                <td class="column100 column7" data-column="column7">5:00 PM</td>
+                <td class="column100 column8" data-column="column8">8:00 AM</td>
+              </tr>
 
-<h2>AJS Library</h2>
-<p>Bienvenue dans notre bibliothèque</p>
-<p>Cliquez sur un ouvrage pour le voir</p>
+              <tr class="row100">
+                <td class="column100 column1" data-column="column1">Jane Medina</td>
+                <td class="column100 column2" data-column="column2">--</td>
+                <td class="column100 column3" data-column="column3">5:00 PM</td>
+                <td class="column100 column4" data-column="column4">5:00 PM</td>
+                <td class="column100 column5" data-column="column5">--</td>
+                <td class="column100 column6" data-column="column6">9:00 AM</td>
+                <td class="column100 column7" data-column="column7">--</td>
+                <td class="column100 column8" data-column="column8">--</td>
+              </tr>
 
-<div style="overflow-x:auto;">
-  <table>
-    <tr>
-      <th>Titre</th>
-      <th>Date</th>
-      <th>Auteur</th>
-      <th>Editeur</th>
-    </tr>
-    <tr>
-      <td>bla</td>
-      <td>bli</td>
-      <td>1950</td>
-      <td>blu</td>
-    </tr>
-    <tr>
-      <td>ga</td>
-      <td>bu</td>
-      <td>1940</td>
-      <td>zo</td>
-    </tr>
-    <tr>
-      <td>pim</td>
-      <td>pam</td>
-      <td>1670</td>
-      <td>poum</td>
-    </tr>
-  </table>
-</div>
+              <tr class="row100">
+                <td class="column100 column1" data-column="column1">Billy Mitchell</td>
+                <td class="column100 column2" data-column="column2">9:00 AM</td>
+                <td class="column100 column3" data-column="column3">--</td>
+                <td class="column100 column4" data-column="column4">--</td>
+                <td class="column100 column5" data-column="column5">--</td>
+                <td class="column100 column6" data-column="column6">--</td>
+                <td class="column100 column7" data-column="column7">2:00 PM</td>
+                <td class="column100 column8" data-column="column8">8:00 AM</td>
+              </tr>
+
+              <tr class="row100">
+                <td class="column100 column1" data-column="column1">Beverly Reid</td>
+                <td class="column100 column2" data-column="column2">--</td>
+                <td class="column100 column3" data-column="column3">5:00 PM</td>
+                <td class="column100 column4" data-column="column4">5:00 PM</td>
+                <td class="column100 column5" data-column="column5">--</td>
+                <td class="column100 column6" data-column="column6">9:00 AM</td>
+                <td class="column100 column7" data-column="column7">--</td>
+                <td class="column100 column8" data-column="column8">--</td>
+              </tr>
+
+              <tr class="row100">
+                <td class="column100 column1" data-column="column1">Tiffany Wade</td>
+                <td class="column100 column2" data-column="column2">8:00 AM</td>
+                <td class="column100 column3" data-column="column3">--</td>
+                <td class="column100 column4" data-column="column4">--</td>
+                <td class="column100 column5" data-column="column5">8:00 AM</td>
+                <td class="column100 column6" data-column="column6">--</td>
+                <td class="column100 column7" data-column="column7">5:00 PM</td>
+                <td class="column100 column8" data-column="column8">8:00 AM</td>
+              </tr>
+
+              <tr class="row100">
+                <td class="column100 column1" data-column="column1">Sean Adams</td>
+                <td class="column100 column2" data-column="column2">--</td>
+                <td class="column100 column3" data-column="column3">5:00 PM</td>
+                <td class="column100 column4" data-column="column4">5:00 PM</td>
+                <td class="column100 column5" data-column="column5">--</td>
+                <td class="column100 column6" data-column="column6">9:00 AM</td>
+                <td class="column100 column7" data-column="column7">--</td>
+                <td class="column100 column8" data-column="column8">--</td>
+              </tr>
+
+              <tr class="row100">
+                <td class="column100 column1" data-column="column1">Rachel Simpson</td>
+                <td class="column100 column2" data-column="column2">9:00 AM</td>
+                <td class="column100 column3" data-column="column3">--</td>
+                <td class="column100 column4" data-column="column4">--</td>
+                <td class="column100 column5" data-column="column5">--</td>
+                <td class="column100 column6" data-column="column6">--</td>
+                <td class="column100 column7" data-column="column7">2:00 PM</td>
+                <td class="column100 column8" data-column="column8">8:00 AM</td>
+              </tr>
+
+              <tr class="row100">
+                <td class="column100 column1" data-column="column1">Mark Salazar</td>
+                <td class="column100 column2" data-column="column2">8:00 AM</td>
+                <td class="column100 column3" data-column="column3">--</td>
+                <td class="column100 column4" data-column="column4">--</td>
+                <td class="column100 column5" data-column="column5">8:00 AM</td>
+                <td class="column100 column6" data-column="column6">--</td>
+                <td class="column100 column7" data-column="column7">5:00 PM</td>
+                <td class="column100 column8" data-column="column8">8:00 AM</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  
+
+<!--===============================================================================================-->  
+  <script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/bootstrap/js/popper.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+  <script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+  <script src="js/main.js"></script>
 
 </body>
 </html>
