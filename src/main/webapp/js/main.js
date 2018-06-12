@@ -23,9 +23,6 @@
 	
 
 
-    $(".voirLivre tr").click(function(){
-      window.location = "localhost:8080/getLivre/" + $(table1).rowIndex;
-    });
-    
+
 
 })(jQuery);
