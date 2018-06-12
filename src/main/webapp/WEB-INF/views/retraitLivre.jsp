@@ -1,11 +1,15 @@
 <%@page import="bibliothequeAJS.service.Transfert"%>
 <%@page import="bibliothequeAJS.service.Livre"%>
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
+
+<%@ page language="java" contentType="text/html; charset=utf-8"
+	pageEncoding="utf-8"%>
+	
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-<title>Bibliothèque AJS</title>
+<title>Prendre ${livre.titre}</title>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <!--===============================================================================================-->
@@ -29,15 +33,13 @@
 <link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
 
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>${livre.titre}</title>
 </head>
-<body>
-<h1>Retrait du livre.</h1>
-<h2>Cliquer sur Retrait pour transférer le livre.</h2>
 
-<div class="limiter">
-	
+<body>
+	<h1>Retrait du livre.</h1>
+	<h2>Cliquer sur Retrait pour transfÃ©rer le livre.</h2>
+
+	<div class="limiter">
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100 ver5 m-b-110">
@@ -52,13 +54,13 @@
 						</thead>
 
 						<tbody>
-								<tr class="row100" >
-									<td class="column100 column1" data-column="column1"></td>
-									<td class="column100 column2" data-column="column2"></td>
-									<td class="column100 column3" data-column="column3"></td>
-									<td class="column100 column4" data-column="column4"></td>
-											
-								</tr>
+							<tr class="row100">
+								<td class="column100 column1" data-column="column1">${livre.titre}</td>
+								<td class="column100 column2" data-column="column2">${livre.annee}</td>
+								<td class="column100 column3" data-column="column3">${livre.auteur}</td>
+								<td class="column100 column4" data-column="column4">${livre.editeur}</td>
+
+							</tr>
 						</tbody>
 					</table>
 				</div>
@@ -66,23 +68,16 @@
 		</div>
 	</div>
 
-<table>
-    <tr>
-      <th>Titre</th>
-      <th>Date</th>
-      <th>Auteur</th>
-      <th>Editeur</th>
-    </tr>
-    <tr>
-      <th>${livre.titre}</th>
-      <th>${livre.annee}</th>
-      <th>${livre.auteur}</th>
-      <th>${livre.editeur}</th>
-    <tr>
-</table>
-<a href="/bibliothequeIAA/retrait/${livre.id}">Retrait</a>
+	<a href="/bibliothequeIAA/retrait/${livre.id}">Retrait</a>
 
-
-
+	<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+	<!--===============================================================================================-->
+	<script src="js/main.js"></script>
 </body>
 </html>
