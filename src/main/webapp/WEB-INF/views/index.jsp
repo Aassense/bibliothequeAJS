@@ -48,16 +48,17 @@
 
 						<tbody>
 
-							<c:forEach items="${livres}" var="livre">
-								<tr class="row100">
-									<td class="column100 column1" data-column="column1"><c:out
-											value="${livre.titre}" /></td>
-									<td class="column100 column2" data-column="column2"><c:out
-											value="${livre.annee}" /></td>
-									<td class="column100 column3" data-column="column3"><c:out
-											value="${livre.auteur}" /></td>
-									<td class="column100 column4" data-column="column4"><c:out
-											value="${livre.editeur}" /></td>
+							<c:forEach items="${livres}" var="livre" varStatus="indexListe">
+								<tr class="row100" >
+									<td class="column100 column1" data-column="column1"><a href="localhost:8080/getlivre/${indexListe}"><c:out
+											value="${livre.titre}" /></a></td>
+									<td class="column100 column2" data-column="column2"><a href="localhost:8080/getlivre/${indexListe}"><c:out
+											value="${livre.annee}" /></a></td>
+									<td class="column100 column3" data-column="column3"><a href="localhost:8080/getlivre/${indexListe}"><c:out
+											value="${livre.auteur}" /></a></td>
+									<td class="column100 column4" data-column="column4"><a href="localhost:8080/getlivre/${indexListe}"><c:out
+											value="${livre.editeur}" /></a></td>
+											
 								</tr>
 							</c:forEach>
 						</tbody>
