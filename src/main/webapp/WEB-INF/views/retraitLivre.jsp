@@ -35,6 +35,37 @@
 <body>
 <h1>Retrait du livre.</h1>
 <h2>Cliquer sur Retrait pour transférer le livre.</h2>
+
+<div class="limiter">
+	
+		<div class="container-table100">
+			<div class="wrap-table100">
+				<div class="table100 ver5 m-b-110">
+					<table data-vertable="ver5">
+						<thead>
+							<tr class="row100 head">
+								<th class="column100 column1" data-column="column1">Titre</th>
+								<th class="column100 column2" data-column="column2">Date</th>
+								<th class="column100 column3" data-column="column3">Auteur</th>
+								<th class="column100 column4" data-column="column4">Editeur</th>
+							</tr>
+						</thead>
+
+						<tbody>
+								<tr class="row100" >
+									<td class="column100 column1" data-column="column1"></td>
+									<td class="column100 column2" data-column="column2"></td>
+									<td class="column100 column3" data-column="column3"></td>
+									<td class="column100 column4" data-column="column4"></td>
+											
+								</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</div>
+
 <table>
     <tr>
       <th>Titre</th>
