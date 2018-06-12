@@ -31,8 +31,14 @@
 </head>
 
 <body>
+<c:if test="${ !message.isEmpty() }">
+<div class="container">
+  <p>${message }</p>
+</div>
+</c:if>
 
 	<div class="limiter">
+	
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100 ver5 m-b-110">

@@ -33,7 +33,6 @@
 <title>${livre.titre}</title>
 </head>
 <body>
-<% %>
 <h1>Retrait du livre.</h1>
 <h2>Cliquer sur Retrait pour transférer le livre.</h2>
 <table>
@@ -50,7 +49,7 @@
       <th>${livre.editeur}</th>
     <tr>
 </table>
-<input type="submit" ><a href="/bibliothequeIAA/retrait/${livre.id}">Retrait</a></input>
+<a href="/bibliothequeIAA/retrait/${livre.id}">Retrait</a>
 
 
 
