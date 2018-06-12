@@ -15,10 +15,6 @@
 	<artifactId>bibliothequeAJS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-<<<<<<< HEAD
-
-=======
->>>>>>> ddf56fc0a250ca4a695e4b0f9a80ecfe578f8462
 
 	<dependencies>
 
@@ -31,6 +27,8 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+		
+		
 
 		<dependency>
       <groupId>org.apache.tomcat.embed</groupId>
