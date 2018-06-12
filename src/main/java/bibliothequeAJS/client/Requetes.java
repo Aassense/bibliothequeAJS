@@ -17,18 +17,17 @@ public class Requetes {
   URL url;
   HttpURLConnection connection;
 
-  public String delete() throws Exception {
-    url = new URL("http://192.168.1.19:8080/iaa-bibli/api/livre/id");
+  public String delete(int id) throws Exception {
+    url = new URL("http://192.168.1.19:8080/iaa-bibli/api/livre/" + id);
     connection = (HttpURLConnection) url.openConnection();
     connection.setRequestMethod("DELETE");
     connection.setDoOutput(false);
     connection.setDoInput(true);
-    System.out.println(connection.getContent());
     connection.getInputStream().close();
     return "code retour";
   }
 
-  public List<Livre> get() throws IOException {
+  public List<Livre> getLivres() throws IOException {
     List<Livre> livres = new ArrayList<>();
 
     url = new URL("http://192.168.1.19:8080/iaa-bibli/api/liste");

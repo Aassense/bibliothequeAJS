@@ -35,13 +35,13 @@ tr:nth-child(even){background-color: #f2f2f2}
       <th>Editeur</th>
     </tr>
     <tr>
-      <th>{livre.titre}</th>
-      <th>{livre.annee}</th>
-      <th>{livre.auteur}</th>
-      <th>{livre.editeur}</th>
+      <th>${livre.titre}</th>
+      <th>${livre.annee}</th>
+      <th>${livre.auteur}</th>
+      <th>${livre.editeur}</th>
     <tr>
 </table>
-<input type="submit" value="Envoyer" >
+<input type="submit" ><a href="/bibliothequeIAA/retrait/${livre.id}">Retrait</a></input>
 
 
 
