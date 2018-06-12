@@ -15,31 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 
 public class BibliothequeControleur {
 
-<<<<<<< HEAD
   private List<Livre> livres;
   private Transfert transfert = new Transfert();
 
+  @CrossOrigin("*")
   @GetMapping(path = "/livres", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
   public List<Livre> getLivres() {
     updateLivres();
     return livres;
   }
 
+  @CrossOrigin(origins = "*")
   @GetMapping(path = "/livres/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-=======
-	private List<Livre> livres;
-	private Transfert transfert = new Transfert();
-	
-	@CrossOrigin("*")
-	@GetMapping(path = "/livres", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
-	public List<Livre> getLivres() {
-		updateLivres();
-		return livres;
-	}
-	@CrossOrigin(origins = "*")
-	@GetMapping(path = "/livres/{index}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
->>>>>>> 6428559c0ae365a66ac148b74e55925a694e493d
-
   public Livre getOccupation(@PathVariable("index") int index) {
 
     updateLivres();
